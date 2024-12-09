@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: 
+      context: ./back-end
+      dockerfile: Dockerfile
+    image: tas6-back-end
+    container_name: back-end
+
+  frontend:
+    build: 
+      context: ./front-end
+      dockerfile: Dockerfile
+    image: task6-front-end
+    container_name: task6-front-end
+    depends_on:
+      - backend
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    image: task6-proxy
+    container_name: task6-proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+
