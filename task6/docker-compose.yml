@@ -3,7 +3,7 @@ services:
     build: 
       context: ./back-end
       dockerfile: Dockerfile
-    image: tas6-back-end
+    image: task6-back-end
     container_name: back-end
 
   frontend:
