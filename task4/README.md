@@ -1,12 +1,9 @@
-#### First terminal building/running the backend:
+##### Commands to run the application
+* `docker-compose build`
+* `docker-compose up`
 
-* `docker build -f ./back-end/Dockerfile -t softy-pinko-back-end:task4 ./back-end`
+##### Checkout the frontend part of the app on the host machine:
+* `http://127.0.0.1:9000`
 
-* `docker run -p 5252:5252 -it --rm --name softy-pinko-back-end-task4 softy-pinko-back-end:task4`
-
-#### Second terminal building/running the front-end:
-
-* `docker build -f ./front-end/Dockerfile -t softy-pinko-front-end:task4 ./front-end`
-
-* `docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task4 softy-pinko-front-end:task4`
-
+##### Checkout the backend part of the app on the host machine:
+* `127.0.0.1:5252/api/hello`
